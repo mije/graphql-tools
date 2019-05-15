@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mije/graphql-tools.svg?branch=master)](https://travis-ci.org/mije/graphql-tools) [![Go Report Card](https://goreportcard.com/badge/github.com/mije/graphql-tools)](https://goreportcard.com/report/github.com/mije/graphql-tools)
+
 # GraphQL Tools
 Set of GraphQL tools to be used either as a Go libraries within your projects or from command line as executable binaries.
 
