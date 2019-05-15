@@ -1,0 +1,46 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  hero(episode: Episode): Character
+  human(id: ID!): Human
+  droid(id: ID!): Droid
+}
+
+type Mutation {
+  favorite(episode: Episode!): Episode
+}
+
+enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}
+
+interface Character {
+  id: ID!
+  name: String
+  friends: [Character]
+  appearsIn: [Episode]
+  secretBackstory: String
+}
+
+type Droid implements Character {
+  id: ID!
+  name: String
+  friends: [Character]
+  appearsIn: [Episode]
+  secretBackstory: String
+  primaryFunction: String
+}
+
+type Human implements Character {
+  id: ID!
+  name: String
+  friends: [Character]
+  appearsIn: [Episode]
+  homePlanet: String
+  secretBackstory: String
+}
